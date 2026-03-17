@@ -1,6 +1,6 @@
 export const environment = {
      production: true,
-    apiUrl: 'https://curvix-api.onrender.com'
+    apiUrl: 'https://curvix-backend.onrender.com'
 };
 
 //production url

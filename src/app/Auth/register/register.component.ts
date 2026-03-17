@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl, ValidationErrors, ReactiveFormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { AuthService } from '../../Core/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -10,64 +11,23 @@ import { RouterLink } from '@angular/router';
 })
 export class RegisterComponent {
 
-  registerForm: FormGroup;
+  _authSrv = inject(AuthService)
   showPassword = signal(false);
   showConfirmPassword = signal(false);
   isLoading = signal(false);
   errorMessage = signal('');
   passwordStrength = signal<'weak' | 'fair' | 'good' | 'strong'>('weak');
+  fb = inject(FormBuilder)
+_router = inject(Router)
 
-  constructor(private fb: FormBuilder) {
-    this.registerForm = this.fb.group({
-      fullName: ['', [Validators.required, Validators.minLength(2)]],
-      email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required, Validators.pattern(/^[0-9\-\+\(\)\s]+$/)]],
-      password: ['', [Validators.required, Validators.minLength(8)]],
-      confirmPassword: ['', Validators.required],
-      terms: [false, Validators.requiredTrue],
-    }, { validators: this.passwordMatchValidator });
-
-    this.registerForm.get('password')?.valueChanges.subscribe(() => {
-      this.updatePasswordStrength();
-    });
-  }
-
-  passwordMatchValidator(control: AbstractControl): ValidationErrors | null {
-    const password = control.get('password');
-    const confirmPassword = control.get('confirmPassword');
-
-    if (!password || !confirmPassword) {
-      return null;
-    }
-
-    return password.value === confirmPassword.value ? null : { passwordMismatch: true };
-  }
-
-  updatePasswordStrength() {
-    const password = this.registerForm.get('password')?.value || '';
-    let strength: 'weak' | 'fair' | 'good' | 'strong' = 'weak';
-
-    if (password.length >= 8) {
-      if (/^[a-z0-9]*$/.test(password)) {
-        strength = 'weak';
-      } else if (/^[a-z0-9\W]*$/.test(password)) {
-        strength = 'fair';
-      } else if (/^[a-z0-9\W][A-Z]$/.test(password)) {
-        strength = 'good';
-      } else if (/[a-z]/.test(password) && /[A-Z]/.test(password) && /[0-9]/.test(password) && /\W/.test(password)) {
-        strength = 'strong';
-      }
-    }
-
-    this.passwordStrength.set(strength);
-  }
+  registerForm: FormGroup = this.fb.group({
+    name: ['', Validators.required],
+    email: ['', Validators.required],
+    password: ['', Validators.required]
+  })
 
   togglePasswordVisibility() {
     this.showPassword.set(!this.showPassword());
-  }
-
-  toggleConfirmPasswordVisibility() {
-    this.showConfirmPassword.set(!this.showConfirmPassword());
   }
 
   onSubmit() {
@@ -77,37 +37,48 @@ export class RegisterComponent {
     }
 
     this.isLoading.set(true);
-    const formData = this.registerForm.value;
+    const {name, email, password } = this.registerForm.value;
 
-    setTimeout(() => {
-      this.isLoading.set(false);
-      console.log('Registration attempt:', formData);
-    }, 1500);
-  }
+    // API call
+    this._authSrv.register({name, email, password }).subscribe({
+      next: (res: any) => {
+        this.isLoading.set(false);
 
-  get fullName() {
-    return this.registerForm.get('fullName');
+        // const token = res.data?.token || res.token
+        // if (!token) {
+        //   this.errorMessage.set('Token not recieved from servefr')
+        // }
+
+        // // store token
+        // localStorage.setItem('vehicle_showroom_token', token)
+        // alert('login succeful, token stored');
+
+        // navigate to dashboard
+        this._router.navigate(['/login'])
+
+      },
+
+      error: (err) => {
+        this.isLoading.set(false)
+
+        if (err.status === 401) {
+          this.errorMessage.set('Invalid email or password')
+        } else {
+          this.errorMessage.set("Something went wrong, Try again later")
+        }
+        console.error('login err', err);
+
+      }
+    })
+
   }
 
   get email() {
     return this.registerForm.get('email');
   }
 
-  get phone() {
-    return this.registerForm.get('phone');
-  }
-
   get password() {
     return this.registerForm.get('password');
   }
 
-  get confirmPassword() {
-    return this.registerForm.get('confirmPassword');
-  }
-
-  get terms() {
-    return this.registerForm.get('terms');
-  }
-
-  
 }
