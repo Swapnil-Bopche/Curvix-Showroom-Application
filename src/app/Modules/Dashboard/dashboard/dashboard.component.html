@@ -1,0 +1,333 @@
+<div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-6 lg:p-8">
+      <div class="max-w-7xl mx-auto">
+        <!-- Header -->
+        <div class="mb-8">
+          <!-- <h1 class="text-4xl font-bold text-gray-900 mb-2">Dashboard</h1> -->
+          <p class="text-gray-600">Welcome back! Here's your business overview.</p>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <!-- Total Sales Card -->
+          <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border-l-4 border-blue-500">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-gray-600 text-sm font-medium">Total Sales</p>
+                <h3 class="text-3xl font-bold text-gray-900 mt-2">₹45,230</h3>
+                <p class="text-green-600 text-sm mt-2">+12% from last month</p>
+              </div>
+              <div class="bg-blue-100 rounded-full p-4">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Total Products Card -->
+          <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border-l-4 border-green-500">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-gray-600 text-sm font-medium">Total Products</p>
+                <h3 class="text-3xl font-bold text-gray-900 mt-2">128</h3>
+                <p class="text-green-600 text-sm mt-2">+5 this week</p>
+              </div>
+              <div class="bg-green-100 rounded-full p-4">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m0 0l8 4m0-4l8 4m-8-4v10m-8-4l8 4m0-4l8-4"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Active Customers Card -->
+          <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border-l-4 border-purple-500">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-gray-600 text-sm font-medium">Active Customers</p>
+                <h3 class="text-3xl font-bold text-gray-900 mt-2">342</h3>
+                <p class="text-green-600 text-sm mt-2">+24 new this month</p>
+              </div>
+              <div class="bg-purple-100 rounded-full p-4">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.856-1.487M15 10a3 3 0 11-6 0 3 3 0 016 0zM9 20H4v-2a3 3 0 015.856-1.487"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pending Follow-ups Card -->
+          <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border-l-4 border-orange-500">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-gray-600 text-sm font-medium">Pending Follow-ups</p>
+                <h3 class="text-3xl font-bold text-gray-900 mt-2">18</h3>
+                <p class="text-orange-600 text-sm mt-2">Due today</p>
+              </div>
+              <div class="bg-orange-100 rounded-full p-4">
+                <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts & Recent Sales Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+          <!-- Chart Card -->
+          <div class="lg:col-span-2 bg-white rounded-2xl shadow-lg p-6">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-xl font-bold text-gray-900">Sales Overview</h2>
+              <div class="flex gap-2">
+                <button class="px-3 py-1 text-sm bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition-colors duration-200">Week</button>
+                <button class="px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">Month</button>
+                <button class="px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200">Year</button>
+              </div>
+            </div>
+            <div class="h-64 flex items-end justify-between gap-4">
+              <div class="flex-1 bg-gradient-to-t from-blue-400 to-blue-500 rounded-lg hover:shadow-lg transition-all duration-300" style="height: 70%"></div>
+              <div class="flex-1 bg-gradient-to-t from-blue-300 to-blue-400 rounded-lg hover:shadow-lg transition-all duration-300" style="height: 50%"></div>
+              <div class="flex-1 bg-gradient-to-t from-blue-400 to-blue-500 rounded-lg hover:shadow-lg transition-all duration-300" style="height: 80%"></div>
+              <div class="flex-1 bg-gradient-to-t from-blue-300 to-blue-400 rounded-lg hover:shadow-lg transition-all duration-300" style="height: 60%"></div>
+              <div class="flex-1 bg-gradient-to-t from-blue-400 to-blue-500 rounded-lg hover:shadow-lg transition-all duration-300" style="height: 75%"></div>
+              <div class="flex-1 bg-gradient-to-t from-blue-300 to-blue-400 rounded-lg hover:shadow-lg transition-all duration-300" style="height: 85%"></div>
+              <div class="flex-1 bg-gradient-to-t from-blue-400 to-blue-500 rounded-lg hover:shadow-lg transition-all duration-300" style="height: 90%"></div>
+            </div>
+            <div class="flex justify-between mt-4 text-sm text-gray-600">
+              <span>Mon</span>
+              <span>Tue</span>
+              <span>Wed</span>
+              <span>Thu</span>
+              <span>Fri</span>
+              <span>Sat</span>
+              <span>Sun</span>
+            </div>
+          </div>
+
+          <!-- Top Products -->
+          <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-6">Top Products</h2>
+            <div class="space-y-4">
+              <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                <div class="flex items-center gap-3">
+                  <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                  <span class="text-sm font-medium text-gray-700">Sedan Series</span>
+                </div>
+                <span class="text-sm font-bold text-gray-900">45</span>
+              </div>
+              <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                <div class="flex items-center gap-3">
+                  <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span class="text-sm font-medium text-gray-700">SUV Premium</span>
+                </div>
+                <span class="text-sm font-bold text-gray-900">38</span>
+              </div>
+              <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                <div class="flex items-center gap-3">
+                  <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+                  <span class="text-sm font-medium text-gray-700">Hatchback Plus</span>
+                </div>
+                <span class="text-sm font-bold text-gray-900">32</span>
+              </div>
+              <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                <div class="flex items-center gap-3">
+                  <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+                  <span class="text-sm font-medium text-gray-700">Truck Deluxe</span>
+                </div>
+                <span class="text-sm font-bold text-gray-900">28</span>
+              </div>
+              <div class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg transition-colors duration-200">
+                <div class="flex items-center gap-3">
+                  <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                  <span class="text-sm font-medium text-gray-700">Coupe Elite</span>
+                </div>
+                <span class="text-sm font-bold text-gray-900">21</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Sales Table -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="p-6 border-b border-gray-200">
+            <h2 class="text-xl font-bold text-gray-900">Recent Sales</h2>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead class="bg-gray-50 border-b border-gray-200">
+                <tr>
+                  <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Customer Name</th>
+                  <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Product</th>
+                  <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Amount</th>
+                  <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Date</th>
+                  <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">Status</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr class="hover:bg-gray-50 transition-colors duration-200">
+                  <td class="px-6 py-4 text-sm text-gray-900 font-medium">Rajesh Kumar</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">Sedan Series Pro</td>
+                  <td class="px-6 py-4 text-sm font-semibold text-gray-900">₹18,50,000</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">Feb 18, 2026</td>
+                  <td class="px-6 py-4">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                      Completed
+                    </span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-50 transition-colors duration-200">
+                  <td class="px-6 py-4 text-sm text-gray-900 font-medium">Priya Singh</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">SUV Premium Max</td>
+                  <td class="px-6 py-4 text-sm font-semibold text-gray-900">₹22,00,000</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">Feb 17, 2026</td>
+                  <td class="px-6 py-4">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                      Completed
+                    </span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-50 transition-colors duration-200">
+                  <td class="px-6 py-4 text-sm text-gray-900 font-medium">Amit Patel</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">Hatchback Plus</td>
+                  <td class="px-6 py-4 text-sm font-semibold text-gray-900">₹9,50,000</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">Feb 16, 2026</td>
+                  <td class="px-6 py-4">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
+                      Processing
+                    </span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-50 transition-colors duration-200">
+                  <td class="px-6 py-4 text-sm text-gray-900 font-medium">Meera Gupta</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">Truck Deluxe</td>
+                  <td class="px-6 py-4 text-sm font-semibold text-gray-900">₹14,75,000</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">Feb 15, 2026</td>
+                  <td class="px-6 py-4">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
+                      Processing
+                    </span>
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-50 transition-colors duration-200">
+                  <td class="px-6 py-4 text-sm text-gray-900 font-medium">Vikram Desai</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">Coupe Elite</td>
+                  <td class="px-6 py-4 text-sm font-semibold text-gray-900">₹25,30,000</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">Feb 14, 2026</td>
+                  <td class="px-6 py-4">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-100 text-red-800">
+                      Pending
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Recent Activity Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8">
+          <!-- Recent Activity -->
+          <div class="lg:col-span-2 bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-6">Recent Activity</h2>
+            <div class="space-y-4">
+              <div class="flex gap-4 pb-4 border-b border-gray-200">
+                <div class="flex-shrink-0">
+                  <div class="flex items-center justify-center h-10 w-10 rounded-full bg-blue-100">
+                    <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-medium text-gray-900">New sale created</p>
+                  <p class="text-sm text-gray-600">Rajesh Kumar purchased Sedan Series</p>
+                  <p class="text-xs text-gray-500 mt-1">2 hours ago</p>
+                </div>
+              </div>
+              <div class="flex gap-4 pb-4 border-b border-gray-200">
+                <div class="flex-shrink-0">
+                  <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-100">
+                    <svg class="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-medium text-gray-900">New customer registered</p>
+                  <p class="text-sm text-gray-600">Priya Singh joined as a customer</p>
+                  <p class="text-xs text-gray-500 mt-1">4 hours ago</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                  <div class="flex items-center justify-center h-10 w-10 rounded-full bg-purple-100">
+                    <svg class="h-6 w-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-medium text-gray-900">Follow-up scheduled</p>
+                  <p class="text-sm text-gray-600">Follow-up meeting scheduled for tomorrow</p>
+                  <p class="text-xs text-gray-500 mt-1">6 hours ago</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-6">Performance</h2>
+            <div class="space-y-5">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-medium text-gray-700">Conversion Rate</span>
+                  <span class="text-sm font-bold text-gray-900">68%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full" style="width: 68%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-medium text-gray-700">Customer Retention</span>
+                  <span class="text-sm font-bold text-gray-900">85%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-medium text-gray-700">Sales Growth</span>
+                  <span class="text-sm font-bold text-gray-900">72%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-2 rounded-full" style="width: 72%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-medium text-gray-700">Employee Performance</span>
+                  <span class="text-sm font-bold text-gray-900">91%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-gradient-to-r from-orange-500 to-orange-600 h-2 rounded-full" style="width: 91%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+    

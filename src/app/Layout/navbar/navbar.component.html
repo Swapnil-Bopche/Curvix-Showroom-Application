@@ -1,0 +1,298 @@
+<nav class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 shadow-2xl border-b border-slate-700">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0 flex items-center">
+        <div class="flex items-center space-x-3">
+          <div
+            class="bg-gradient-to-br from-blue-500 to-cyan-500 p-2.5 rounded-xl cursor-pointer shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <svg class="h-8 w-8 text-white cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+              </path>
+            </svg>
+          </div>
+          <span routerLink="/dashboard"
+            class="text-2xl cursor-pointer font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            AutoCRM
+          </span>
+        </div>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden lg:block">
+        <div class="flex items-center space-x-1">
+          <!-- Product Menu -->
+          <div class="relative group">
+            <button
+              class="px-4 py-2.5 text-gray-200 hover:text-white hover:bg-slate-700/50 rounded-lg transition-all duration-300 font-medium flex items-center space-x-1">
+              <span>Product</span>
+              <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div
+              class="absolute left-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-2xl border border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2 z-50">
+              <a href="#" routerLink="/product-form"
+                class="block px-4 py-3 text-sm text-gray-200 hover:bg-slate-700 hover:text-white transition-colors duration-200 rounded-t-lg">Add
+                Product</a>
+              <a href="#" routerLink="/product-list"
+                class="block px-4 py-3 text-sm text-gray-200 hover:bg-slate-700 hover:text-white transition-colors duration-200 rounded-b-lg">Product
+                List</a>
+            </div>
+          </div>
+
+          <!-- Employee Menu -->
+          <div class="relative group">
+            <button
+              class="px-4 py-2.5 text-gray-200 hover:text-white hover:bg-slate-700/50 rounded-lg transition-all duration-300 font-medium flex items-center space-x-1">
+              <span>Employee</span>
+              <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div
+              class="absolute left-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-2xl border border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2 z-50">
+              <a href="#" routerLink="/employee-form"
+                class="block px-4 py-3 text-sm text-gray-200 hover:bg-slate-700 hover:text-white transition-colors duration-200 rounded-t-lg">Add
+                Employee</a>
+              <a href="#" routerLink="/employee-list"
+                class="block px-4 py-3 text-sm text-gray-200 hover:bg-slate-700 hover:text-white transition-colors duration-200 rounded-b-lg">Employee
+                List</a>
+            </div>
+          </div>
+
+          <!-- Customer Menu -->
+          <div class="relative group">
+            <button
+              class="px-4 py-2.5 text-gray-200 hover:text-white hover:bg-slate-700/50 rounded-lg transition-all duration-300 font-medium flex items-center space-x-1">
+              <span>Customer</span>
+              <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div
+              class="absolute left-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-2xl border border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2 z-50">
+              <a href="#" routerLink="/customer-form"
+                class="block px-4 py-3 text-sm text-gray-200 hover:bg-slate-700 hover:text-white transition-colors duration-200 rounded-t-lg">Add
+                Customer</a>
+              <a href="#" routerLink="/customer-list"
+                class="block px-4 py-3 text-sm text-gray-200 hover:bg-slate-700 hover:text-white transition-colors duration-200 rounded-b-lg">Customer
+                List</a>
+            </div>
+          </div>
+
+          <!-- Follow up Menu -->
+          <div class="relative group">
+            <button
+              class="px-4 py-2.5 text-gray-200 hover:text-white hover:bg-slate-700/50 rounded-lg transition-all duration-300 font-medium flex items-center space-x-1">
+              <span>Follow up</span>
+              <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div
+              class="absolute left-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-2xl border border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2 z-50">
+              <a href="#"
+                class="block px-4 py-3 text-sm text-gray-200 hover:bg-slate-700 hover:text-white transition-colors duration-200 rounded-lg">Follow
+                up List</a>
+            </div>
+          </div>
+
+          <!-- Sell Menu -->
+          <div class="relative group">
+            <button
+              class="px-4 py-2.5 text-gray-200 hover:text-white hover:bg-slate-700/50 rounded-lg transition-all duration-300 font-medium flex items-center space-x-1">
+              <span>Sell</span>
+              <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div
+              class="absolute left-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-2xl border border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2 z-50">
+              <a href="#"
+                class="block px-4 py-3 text-sm text-gray-200 hover:bg-slate-700 hover:text-white transition-colors duration-200 rounded-lg">Sell
+                List</a>
+            </div>
+          </div>
+
+          <!-- Report Menu -->
+          <div class="relative group">
+            <button
+              class="px-4 py-2.5 text-gray-200 hover:text-white hover:bg-slate-700/50 rounded-lg transition-all duration-300 font-medium flex items-center space-x-1">
+              <span>Report</span>
+              <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div
+              class="absolute left-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-2xl border border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2 z-50">
+              <a href="#"
+                class="block px-4 py-3 text-sm text-gray-200 hover:bg-slate-700 hover:text-white transition-colors duration-200 rounded-lg">All
+                Reports</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side - Logout -->
+      <div class="hidden lg:flex items-center">
+        <button (click)="logout()"
+          class="flex items-center space-x-2 px-5 py-2.5 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-medium">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+          </svg>
+          <span>Logout</span>
+        </button>
+      </div>
+
+
+      <!-- Responsive -->
+
+      <!-- Mobile menu button -->
+      <div class="lg:hidden">
+        <button (click)="toggleMobileMenu()"
+          class="p-2 rounded-lg text-gray-300 hover:text-white hover:bg-slate-700/50 transition-all duration-300">
+          <svg *ngIf="!mobileMenuOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg *ngIf="mobileMenuOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div *ngIf="mobileMenuOpen" class="lg:hidden border-t border-slate-700">
+    <div class="px-4 pt-2 pb-4 space-y-2 bg-slate-800/50">
+      <!-- Product -->
+      <div>
+        <button (click)="toggleSubmenu('product')"
+          class="w-full flex items-center justify-between px-4 py-3 text-gray-200 hover:bg-slate-700 rounded-lg transition-all duration-300">
+          <span class="font-medium">Product</span>
+          <svg class="w-5 h-5 transform transition-transform duration-300"
+            [class.rotate-180]="openSubmenu === 'product'" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div *ngIf="openSubmenu === 'product'" class="ml-4 mt-2 space-y-1">
+          <a href="#"
+            class="block px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white rounded-lg transition-colors duration-200">Add
+            Product</a>
+          <a href="#"
+            class="block px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white rounded-lg transition-colors duration-200">Product
+            List</a>
+        </div>
+      </div>
+
+      <!-- Employee -->
+      <div>
+        <button (click)="toggleSubmenu('employee')"
+          class="w-full flex items-center justify-between px-4 py-3 text-gray-200 hover:bg-slate-700 rounded-lg transition-all duration-300">
+          <span class="font-medium">Employee</span>
+          <svg class="w-5 h-5 transform transition-transform duration-300"
+            [class.rotate-180]="openSubmenu === 'employee'" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div *ngIf="openSubmenu === 'employee'" class="ml-4 mt-2 space-y-1">
+          <a href="#" routerLink="/employee-form"
+            class="block px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white rounded-lg transition-colors duration-200">Add
+            Employee</a>
+          <a href="#" routerLink="/employee-list"
+            class="block px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white rounded-lg transition-colors duration-200">Employee
+            List</a>
+        </div>
+      </div>
+
+      <!-- Customer -->
+      <div>
+        <button (click)="toggleSubmenu('customer')"
+          class="w-full flex items-center justify-between px-4 py-3 text-gray-200 hover:bg-slate-700 rounded-lg transition-all duration-300">
+          <span class="font-medium">Customer</span>
+          <svg class="w-5 h-5 transform transition-transform duration-300"
+            [class.rotate-180]="openSubmenu === 'customer'" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div *ngIf="openSubmenu === 'customer'" class="ml-4 mt-2 space-y-1">
+          <a href="#" routerLink="/customer-form"
+            class="block px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white rounded-lg transition-colors duration-200">Add
+            Customer</a>
+          <a href="#" routerLink="/customer-list"
+            class="block px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white rounded-lg transition-colors duration-200">Customer
+            List</a>
+        </div>
+      </div>
+
+      <!-- Follow up -->
+      <div>
+        <button (click)="toggleSubmenu('followup')"
+          class="w-full flex items-center justify-between px-4 py-3 text-gray-200 hover:bg-slate-700 rounded-lg transition-all duration-300">
+          <span class="font-medium">Follow up</span>
+          <svg class="w-5 h-5 transform transition-transform duration-300"
+            [class.rotate-180]="openSubmenu === 'followup'" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div *ngIf="openSubmenu === 'followup'" class="ml-4 mt-2 space-y-1">
+          <a href="#"
+            class="block px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white rounded-lg transition-colors duration-200">Follow
+            up List</a>
+        </div>
+      </div>
+
+      <!-- Sell -->
+      <div>
+        <button (click)="toggleSubmenu('sell')"
+          class="w-full flex items-center justify-between px-4 py-3 text-gray-200 hover:bg-slate-700 rounded-lg transition-all duration-300">
+          <span class="font-medium">Sell</span>
+          <svg class="w-5 h-5 transform transition-transform duration-300" [class.rotate-180]="openSubmenu === 'sell'"
+            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div *ngIf="openSubmenu === 'sell'" class="ml-4 mt-2 space-y-1">
+          <a href="#"
+            class="block px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white rounded-lg transition-colors duration-200">Sell
+            List</a>
+        </div>
+      </div>
+
+      <!-- Report -->
+      <div>
+        <button (click)="toggleSubmenu('report')"
+          class="w-full flex items-center justify-between px-4 py-3 text-gray-200 hover:bg-slate-700 rounded-lg transition-all duration-300">
+          <span class="font-medium">Report</span>
+          <svg class="w-5 h-5 transform transition-transform duration-300" [class.rotate-180]="openSubmenu === 'report'"
+            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div *ngIf="openSubmenu === 'report'" class="ml-4 mt-2 space-y-1">
+          <a href="#"
+            class="block px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white rounded-lg transition-colors duration-200">All
+            Reports</a>
+        </div>
+      </div>
+
+      <!-- Logout -->
+      <button (click)="logout()"
+        class="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-lg hover:from-red-700 hover:to-red-800 transition-all duration-300 mt-4">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+        </svg>
+        <span class="font-medium">Logout</span>
+      </button>
+    </div>
+  </div>
+</nav>
