@@ -2,15 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IApiResponse, IEmployee, IEmployeePayload, IPost } from '../models/interfaces';
-
+import { environment } from '../../../environments/environment.development';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
-  private BaseUrl: string = 'http://localhost:1600'
-
+  private BaseUrl  = environment.apiUrl
   constructor() { }
 
   http = inject(HttpClient)

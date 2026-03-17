@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IApiResponse, ICustomer } from '../models/interfaces';
+import { environment } from '../../../environments/environment.development';
 
 
 
@@ -9,7 +10,7 @@ import { IApiResponse, ICustomer } from '../models/interfaces';
   providedIn: 'root'
 })
 export class CustomerService {
-  private BaseUrl: string = 'http://localhost:1600'
+  private BaseUrl = environment.apiUrl
 
   constructor() { }
 

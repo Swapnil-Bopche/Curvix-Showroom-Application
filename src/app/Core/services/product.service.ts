@@ -3,12 +3,13 @@ import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IApiResponse, IBrand, IProduct, IProductListResponse, ITag } from '../models/interfaces';
 import { IProductPayload } from '../../Modules/Product/model/productInterface';
+import { environment } from '../../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  private BaseUrl: string = 'http://localhost:1600'
+  private BaseUrl = environment.apiUrl
 
   constructor() { }
 

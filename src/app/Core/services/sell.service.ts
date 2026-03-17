@@ -3,6 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IAccessories, IApiResponse, ISell } from '../models/interfaces';
 import { IVehicleOrder } from '../../Modules/Sell/sell-list/model/vehicleOrderInterface';
+import { environment } from '../../../environments/environment.development';
 
 
 @Injectable({
@@ -13,7 +14,7 @@ export class SellService {
   constructor() { }
 
   _http = inject(HttpClient)
-  private BaseUrl: string = 'http://localhost:1600'
+  private BaseUrl  = environment.apiUrl
 
   getSellById(customerId: string): Observable<ISell> {
     // This method will be used to fetch sell details by customerId

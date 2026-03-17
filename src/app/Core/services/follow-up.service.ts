@@ -3,6 +3,7 @@ import { inject, Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
 import { IApiResponse, IFollowUp, IFollowUpPayload, IFollowupType } from '../models/interfaces';
+import { environment } from '../../../environments/environment.development';
 
 
 @Injectable({
@@ -10,7 +11,7 @@ import { IApiResponse, IFollowUp, IFollowUpPayload, IFollowupType } from '../mod
 })
 export class FollowUpService {
 
-  private BaseUrl: string = 'http://localhost:1600'
+  private BaseUrl = environment.apiUrl
   constructor() { }
 
   _http = inject(HttpClient)
