@@ -43,6 +43,8 @@ export class LoginComponent {
     // API call
     this._authSrv.login({ email, password }).subscribe({
       next: (res: any) => {
+        console.log('full response', res);
+
         this.isLoading.set(false);
 
         const token = res.data?.token || res.token
@@ -66,7 +68,7 @@ export class LoginComponent {
         if (err.status === 401) {
           this.errorMessage.set('Invalid email or password')
         } else {
-          this.errorMessage.set(err?.error?.message ||  "Something went wrong, Try again later")
+          this.errorMessage.set(err?.error?.message || "Something went wrong, Try again later")
         }
         console.error('login err', err);
 
