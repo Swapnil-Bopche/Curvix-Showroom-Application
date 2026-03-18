@@ -60,7 +60,7 @@ export class AddEmployeeComponent {
     this.employeeService.getPosts().subscribe((res: IPost[]) => {
       if (res) {
         this.employeePosts = res
-        console.log('posts', this.employeePosts);
+        console.log('posts h ua mhi', this.employeePosts);
       }
 
     })
