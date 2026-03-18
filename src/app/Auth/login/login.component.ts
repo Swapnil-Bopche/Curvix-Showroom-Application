@@ -48,6 +48,7 @@ export class LoginComponent {
         const token = res.data?.token || res.token
         if (!token) {
           this.errorMessage.set('Token not recieved from servefr')
+          return
         }
 
         // store token
@@ -65,7 +66,7 @@ export class LoginComponent {
         if (err.status === 401) {
           this.errorMessage.set('Invalid email or password')
         } else {
-          this.errorMessage.set("Something went wrong, Try again later")
+          this.errorMessage.set(err?.error?.message ||  "Something went wrong, Try again later")
         }
         console.error('login err', err);
 
@@ -83,3 +84,9 @@ export class LoginComponent {
   }
 
 }
+
+
+
+
+//login credentails
+// email: "chetan@gmail.com" password: 2026_angular ->  Production credentails
