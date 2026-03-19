@@ -73,9 +73,10 @@ export class AddEmployeeComponent {
       next: (res: IApiResponse<IEmployee>) => {
         if (res) {
           const employeeDetls = res.data
+          const _joinningDate = employeeDetls.joinningDate ? new Date(employeeDetls.joinningDate).toISOString().split('T')[0] : '';
           this.EmployeeForm.patchValue({
             name: employeeDetls.name,
-            joinningDate: employeeDetls.joinningDate,
+            joinningDate: _joinningDate,
             address: employeeDetls.address,
             post: employeeDetls.post._id
           })

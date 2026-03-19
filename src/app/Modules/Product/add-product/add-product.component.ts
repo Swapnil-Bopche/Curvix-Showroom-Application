@@ -112,6 +112,7 @@ export class AddProductComponent implements OnInit {
     this.productService.createProduct(this.ProductForm.value).subscribe({
       next: (res: IApiResponse<IProduct>) => {
         if (res) {
+         console.log('full product data:', res);
           
           alert(res.message || 'product added successfully!')
           this.redirectedToProductlist()
